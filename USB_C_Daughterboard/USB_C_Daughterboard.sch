@@ -253,4 +253,16 @@ Wire Wire Line
 	6200 3900 6200 4000
 Text Label 4950 3150 0    50   ~ 0
 VBUS
+Text Label 5075 3700 0    50   ~ 0
+D-
+Text Label 5075 3900 0    50   ~ 0
+D+
+Text Label 5025 4200 0    50   ~ 0
+SBU1
+Text Label 5025 4400 0    50   ~ 0
+SBU2
+Text Label 4975 3350 0    50   ~ 0
+CC1
+Text Label 4975 3450 0    50   ~ 0
+CC2
 $EndSCHEMATC
