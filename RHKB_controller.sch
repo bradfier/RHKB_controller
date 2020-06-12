@@ -1,4 +1,252 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:TPS63000 U?
+U 1 1 5EE33FC2
+P 2900 1900
+F 0 "U?" H 2900 2567 50  0000 C CNN
+F 1 "TPS63000" H 2900 2476 50  0000 C CNN
+F 2 "Package_SON:Texas_DRC0010J_ThermalVias" H 3750 1350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tps63000.pdf" H 2600 2450 50  0001 C CNN
+F 4 "C24966" H 2900 1900 50  0001 C CNN "LCSC#"
+	1    2900 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 5EE36425
+P 2900 1000
+F 0 "L?" V 3090 1000 50  0000 C CNN
+F 1 "2.2u" V 2999 1000 50  0000 C CNN
+F 2 "" H 2900 1000 50  0001 C CNN
+F 3 "https://search.murata.co.jp/Ceramy/image/img/P02/JELF243B-0028.pdf" H 2900 1000 50  0001 C CNN
+F 4 "LQM21PN2R2NGCD " V 2900 1000 50  0001 C CNN "MFN#"
+F 5 "C86089" V 2900 1000 50  0001 C CNN "LCSC#"
+	1    2900 1000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 1500 2400 1500
+Wire Wire Line
+	2400 1500 2400 1000
+Wire Wire Line
+	2400 1000 2750 1000
+Wire Wire Line
+	3300 1500 3400 1500
+Wire Wire Line
+	3400 1500 3400 1000
+Wire Wire Line
+	3400 1000 3050 1000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5EE38114
+P 4100 1350
+F 0 "#PWR?" H 4100 1200 50  0001 C CNN
+F 1 "+3V3" H 4115 1523 50  0000 C CNN
+F 2 "" H 4100 1350 50  0001 C CNN
+F 3 "" H 4100 1350 50  0001 C CNN
+	1    4100 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR?
+U 1 1 5EE39554
+P 1900 1500
+F 0 "#PWR?" H 1900 1350 50  0001 C CNN
+F 1 "VBUS" H 1915 1673 50  0000 C CNN
+F 2 "" H 1900 1500 50  0001 C CNN
+F 3 "" H 1900 1500 50  0001 C CNN
+	1    1900 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5819 D?
+U 1 1 5EE3A1E7
+P 1600 1700
+F 0 "D?" H 1600 1483 50  0000 C CNN
+F 1 "1N5819" H 1600 1574 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 1600 1525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 1600 1700 50  0001 C CNN
+F 4 "C191023" H 1600 1700 50  0001 C CNN "LCSC#"
+	1    1600 1700
+	-1   0    0    1   
+$EndComp
+Text GLabel 1250 1700 0    50   Input ~ 0
+BAT+
+Wire Wire Line
+	1900 1500 1900 1700
+Wire Wire Line
+	1900 1700 2100 1700
+Wire Wire Line
+	1250 1700 1450 1700
+Wire Wire Line
+	1750 1700 1900 1700
+Connection ~ 1900 1700
+Wire Wire Line
+	2300 1700 2300 1800
+Wire Wire Line
+	2300 1800 2500 1800
+Connection ~ 2300 1700
+Wire Wire Line
+	2300 1700 2500 1700
+Wire Wire Line
+	2300 1800 2300 1900
+Wire Wire Line
+	2300 1900 2500 1900
+Connection ~ 2300 1800
+Wire Wire Line
+	2300 1900 2300 2100
+Wire Wire Line
+	2300 2100 2500 2100
+Connection ~ 2300 1900
+$Comp
+L Device:R R?
+U 1 1 5EE3BA04
+P 3700 1750
+F 0 "R?" H 3630 1704 50  0000 R CNN
+F 1 "1K" H 3630 1795 50  0000 R CNN
+F 2 "" V 3630 1750 50  0001 C CNN
+F 3 "~" H 3700 1750 50  0001 C CNN
+	1    3700 1750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 1700 3450 1700
+Wire Wire Line
+	3450 1700 3450 1550
+Wire Wire Line
+	3450 1550 3700 1550
+Wire Wire Line
+	3700 1550 3700 1600
+$Comp
+L Device:R R?
+U 1 1 5EE3F2D7
+P 3700 2150
+F 0 "R?" H 3630 2104 50  0000 R CNN
+F 1 "178K" H 3630 2195 50  0000 R CNN
+F 2 "" V 3630 2150 50  0001 C CNN
+F 3 "~" H 3700 2150 50  0001 C CNN
+	1    3700 2150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 1900 3550 1900
+Wire Wire Line
+	3550 1900 3550 1950
+Wire Wire Line
+	3550 1950 3700 1950
+Wire Wire Line
+	3700 1950 3700 1900
+Wire Wire Line
+	3700 1950 3700 2000
+Connection ~ 3700 1950
+$Comp
+L power:GND #PWR?
+U 1 1 5EE3FF7A
+P 3700 2400
+F 0 "#PWR?" H 3700 2150 50  0001 C CNN
+F 1 "GND" H 3705 2227 50  0000 C CNN
+F 2 "" H 3700 2400 50  0001 C CNN
+F 3 "" H 3700 2400 50  0001 C CNN
+	1    3700 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EE40152
+P 2850 2600
+F 0 "#PWR?" H 2850 2350 50  0001 C CNN
+F 1 "GND" H 2855 2427 50  0000 C CNN
+F 2 "" H 2850 2600 50  0001 C CNN
+F 3 "" H 2850 2600 50  0001 C CNN
+	1    2850 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2300 3700 2400
+Wire Wire Line
+	2800 2500 2800 2550
+Wire Wire Line
+	2800 2550 2850 2550
+Wire Wire Line
+	2850 2550 2850 2600
+Wire Wire Line
+	2900 2500 2900 2550
+Wire Wire Line
+	2900 2550 2850 2550
+Connection ~ 2850 2550
+$Comp
+L Device:C_Small C?
+U 1 1 5EE4135D
+P 2100 1900
+F 0 "C?" H 1950 1950 50  0000 L CNN
+F 1 "10u" H 1900 1850 50  0000 L CNN
+F 2 "" H 2100 1900 50  0001 C CNN
+F 3 "~" H 2100 1900 50  0001 C CNN
+	1    2100 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5EE41C6C
+P 4100 1750
+F 0 "C?" H 4200 1800 50  0000 L CNN
+F 1 "10u" H 4200 1700 50  0000 L CNN
+F 2 "" H 4100 1750 50  0001 C CNN
+F 3 "~" H 4100 1750 50  0001 C CNN
+	1    4100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EE428AF
+P 4100 2400
+F 0 "#PWR?" H 4100 2150 50  0001 C CNN
+F 1 "GND" H 4105 2227 50  0000 C CNN
+F 2 "" H 4100 2400 50  0001 C CNN
+F 3 "" H 4100 2400 50  0001 C CNN
+	1    4100 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1550 4100 1550
+Wire Wire Line
+	4100 1550 4100 1650
+Connection ~ 3700 1550
+Wire Wire Line
+	4100 1350 4100 1550
+Connection ~ 4100 1550
+Wire Wire Line
+	4100 1850 4100 2400
+$Comp
+L power:GND #PWR?
+U 1 1 5EE44374
+P 2100 2400
+F 0 "#PWR?" H 2100 2150 50  0001 C CNN
+F 1 "GND" H 2105 2227 50  0000 C CNN
+F 2 "" H 2100 2400 50  0001 C CNN
+F 3 "" H 2100 2400 50  0001 C CNN
+	1    2100 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1700 2100 1800
+Connection ~ 2100 1700
+Wire Wire Line
+	2100 1700 2300 1700
+Wire Wire Line
+	2100 2000 2100 2400
 $EndSCHEMATC
