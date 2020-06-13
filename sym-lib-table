@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Connector_USB)(type Legacy)(uri ${KIPRJMOD}/Connector_USB.lib)(options "")(descr ""))
+  (lib (name Charge_Controller)(type Legacy)(uri ${KIPRJMOD}/Charge_Controller.lib)(options "")(descr ""))
+)
